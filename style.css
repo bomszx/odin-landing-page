@@ -336,9 +336,11 @@ footer {
         padding: 0;
     }
 
-    .sayer {
+    .third .sayer {
         font-weight: 100;
-        margin-right: 10rem;
+        margin-left: 0;
+        color: white;
+        width: 100%;
     }
 
     .fourth {
@@ -346,7 +348,9 @@ footer {
     }
 
     .for {
+        display: flex;
         flex-direction: column;
+        justify-content: center;
         padding: .5rem;
         text-align: center;
         gap: 0;
