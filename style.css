@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
     font-family: var(--roboto);
 }
 
@@ -27,6 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
 }
 
 header > p {
@@ -93,6 +93,8 @@ header {
     gap: 2rem;
     padding: 3rem;
     margin: var(--margin);
+    color: white;
+    flex-flow: row wrap;
 }
 
 .left h1 {
@@ -121,7 +123,7 @@ header {
 /* second div */
 
 .second {
-    background-color: #08110b85;
+    /* background-color: #08110b85; */
     padding: 40px;
 }
 
@@ -130,12 +132,27 @@ header {
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 3rem;
+    color: white;
+}
+
+.square:hover {
+    color: green;
 }
 
 .box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: .5rem;
+    width: 150px;
+    text-align: center;
+    color: #08110b00;
+    transition: ease-in .8s;
+    margin-bottom: 1rem;
+}
+
+.box > p {
+    margin-top: .5rem;
 }
 
 .boxes {
@@ -145,15 +162,10 @@ header {
     gap: 6rem;
 }
 
-.boxes p {
-    margin-top: .5rem;
-    width: 150px;
-    text-align: center;
-    color: #08110b00;
-}
 
-.box p:hover:after {
-    color: red;
+.box:hover {
+    color: white;
+
 }
 
 .square {
@@ -162,6 +174,8 @@ header {
     background-color: azure;
     border-radius: 3px;
 }
+
+
 
 /* third div */
 
@@ -194,6 +208,7 @@ header {
 .sayer {
     font-weight: 800;
     size: 1.5rem;
+    color: white;
 }
 
 .saying > p {
@@ -211,6 +226,7 @@ header {
     justify-content: center;
     padding: 4rem;    
     background-color: #08110b85;
+    color: white;
 }
 
 
@@ -237,6 +253,84 @@ header {
 
 footer {
     padding: 1rem;
+    color: white;
     text-align: center;
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header ul {
+        margin-left: 9.5rem;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .first, .third {
+        margin-left: 0;
+        margin-right: 0;   
+    }
+
+    .first {
+        text-align: center;
+        padding: 0;
+        gap: 0;
+        height: 50vh;
+    }
+
+    .left h1 {
+        font-size: 1.5rem;
+        margin-bottom: .5rem;
+    }
+
+    .boxes {
+        gap: 0;
+    }
+
+    .second {
+        padding: 0;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .third {
+        padding: 0;
+    }
+
+    .third p {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .sayer {
+        font-weight: 100;
+        margin-right: 10rem;
+    }
+
+    .fourth {
+        padding: 0;
+    }
+
+    .for {
+        flex-direction: column;
+        padding: .5rem;
+        text-align: center;
+        gap: 0;
+    }
+
+    .for button {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+
+}
